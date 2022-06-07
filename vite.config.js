@@ -1,5 +1,5 @@
 import generateSitemap from 'vite-plugin-pages-sitemap'
-import Inspector from "vite-plugin-vue-inspector"
+// import Inspector from "vite-plugin-vue-inspector"
 import Layouts from 'vite-plugin-vue-layouts';
 import legacy from "@vitejs/plugin-legacy"
 import Markdown, {meta} from 'vite-plugin-md'
@@ -39,6 +39,6 @@ export default defineConfig({
       }
     }),
     Layouts(),
-    Inspector()
+    // Inspector()
   ]
 })

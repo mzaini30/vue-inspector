@@ -10,6 +10,7 @@ import RouterPrefetch from 'vue-router-prefetch'
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
 import lazy from 'vue-lazyload'
+import inspector from '../inspector/index.mjs'
 
 const routes = setupLayouts(generatedRoutes)
 
@@ -31,4 +32,5 @@ createApp(App)
   .use(RouterPrefetch)
   .use(head)
   .use(lazy)
+  .use(inspector)
   .mount('#app')

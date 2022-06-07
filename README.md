@@ -1,71 +1,36 @@
-# Vue Starter 
+# Vue Inspector Agnostic
 
-## Usibg Vue Editor
+## Why I create this?
 
-Add in `~/.bashrc`:
+I like [Vue Inspector for Vite](https://github.com/webfansplz/vite-plugin-vue-inspector). However, I'm currently working on a Chrome extension called [Automa](https://github.com/AutomaApp/automa) that uses Webpack as its bundler. So, I can't use it. So, I created this package that can be used for any bundler.
+
+## How to use it?
+
+Install:
 
 ```bash
-export VUE_EDITOR=subl
+npm i vue-inspector-agnostic
 ```
 
-## Place Vue Files and Markdown
-
-In `src/pages/`.
-
-## Place Static Files
-
-In `public/`.
-
-## Modify Base URL (for sitemap)
-
-In `vite.config.js`, in section:
+Place it in `main.js` like this:
 
 ```javascript
-const hostname = 'http://localhost:3000/'
+import { createApp } from 'vue';
+import App from './App.vue';
+import inspector from 'vue-inspector-agnostic'
+
+createApp(App)
+  .use(inspector)
+  .mount('#app');
 ```
 
-## Markdown File Example with Head
+## How to run Inspector?
 
-```markdown
----
-title: About
----
+Press `meta` and `/` (Mac)	
+or `Windows` and `/` (Windows or Linux)
 
-# This is about page
+## Screenshot
 
-Good
-```
-
-## Link to Other Page
-
-```html
-<router-link to="/about">About page</router-link>
-```
-
-## Using Head in Vue Page
-
-```html
-<script setup="">
- import {Head} from '@vueuse/head'
-</script>
-
-<template>
- <Head>
-  <title>Hi...</title>
- </Head>
-
- <p>This is home</p>
-</template>
-```
-
-## Using Vue Lazy Load
-
-```html
-<script setup>
-  const image = '/cat.jpg'
-</script>
-
-<template>
-  <img v-lazy='image' />
-</template>
-```
+<p align='center'>
+	<img src='ss.png'/>
+</p>
