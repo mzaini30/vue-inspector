@@ -1,1 +1,0 @@
-System.register(["./index-legacy.16642aa6.js"],(function(e){"use strict";var t,n,r;return{setters:[function(e){t=e._,n=e.o,r=e.c}],execute:function(){e("default",t({},[["render",function(e,t){return n(),r("h1",null,"Ini adalah about")}]]))}}}));
