@@ -26,7 +26,8 @@ createApp(App)
 
 ## How to run Inspector?
 
-Press `meta` and `/` (Mac)	
+Press `meta` and `/` (Mac) 
+
 or `Windows` and `/` (Windows or Linux)
 
 ## Screenshot
