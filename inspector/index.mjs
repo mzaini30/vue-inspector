@@ -1,16 +1,13 @@
+import {store} from './store.mjs'
+
 export default {
 	install (app){
 		app.mixin({
-			data(){
-				return {
-					active: false
-				}
-			},
 			methods: {
 				init(){
 					const location = this.$.vnode.type.__file
 
-					if (this.active){
+					if (store.active){
 						document.title = `[dev] ${document.title.replace('[dev] ', '')}`
 					} else {
 						document.title = document.title.replace('[dev] ', '')
@@ -22,26 +19,46 @@ export default {
 						&& this.$el.getAttribute('data-v-location') == undefined
 					){
 						this.$el.setAttribute('data-v-location', location)
-						// if (this.active){
-						// 	this.$el.setAttribute('title', location.split('/').reverse()[0])
-						// }
-						this.$el.addEventListener('click', () => {
-							if (this.active){
-								prompt('', location)
-							}
-						})
 					}
 				}
 			},
 			mounted(){
 				document.addEventListener('keypress', x => {
 					if (x.metaKey == true && x.key == '/'){
-						this.active = !this.active
 						this.init()
-					}
+					}		
 				})
 				this.init()
 			}
 		})
+
+		document.addEventListener('keypress', x => {
+			if (x.metaKey == true && x.key == '/'){
+				store.active = !store.active
+			}
+		})
+
+		document.addEventListener('click', x => {
+      let target
+      function show(x){
+      	if (store.active){
+      		prompt('', x)
+      	}
+      }
+      
+      let position = x.target
+      function getTarget(){
+        target = position.getAttribute('data-v-location')
+        if (!target){
+        	if (position.parentNode){
+	        	position = position.parentNode
+	        	getTarget()
+        	}
+        } else {
+        	show(target)
+        }
+      }
+      getTarget()
+    })
 	}
 }

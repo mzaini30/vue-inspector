@@ -1,6 +1,6 @@
 {
   "name": "vue-inspector-agnostic",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Vue inspector for all bundler",
   "main": "inspector/index.mjs",
   "repository": {
