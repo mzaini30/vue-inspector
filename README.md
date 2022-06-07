@@ -30,6 +30,8 @@ Press `meta` and `/` (Mac)
 
 or `Windows` and `/` (Windows or Linux)
 
+If page title contains `[dev]` at first place, Inspector is active.
+
 ## Screenshot
 
 <p align='center'>

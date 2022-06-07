@@ -22,7 +22,9 @@ export default {
 						&& this.$el.getAttribute('data-v-location') == undefined
 					){
 						this.$el.setAttribute('data-v-location', location)
-						this.$el.setAttribute('title', location.split('/').reverse()[0])
+						// if (this.active){
+						// 	this.$el.setAttribute('title', location.split('/').reverse()[0])
+						// }
 						this.$el.addEventListener('click', () => {
 							if (this.active){
 								prompt('', location)
