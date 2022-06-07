@@ -32,5 +32,5 @@ or `Windows` and `/` (Windows or Linux)
 ## Screenshot
 
 <p align='center'>
-	<img src='ss.png'/>
+	<img src='https://github.com/mzaini30/vue-inspector/blob/HEAD/ss.png?raw=true'/>
 </p>
