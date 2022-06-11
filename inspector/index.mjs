@@ -24,7 +24,7 @@ export default {
 			},
 			mounted(){
 				document.addEventListener('keypress', x => {
-					if (x.metaKey == true && x.key == '/'){
+					if (x.key == 'k' && x.target.outerHTML.includes('<body')){
 						this.init()
 					}		
 				})
@@ -33,7 +33,7 @@ export default {
 		})
 
 		document.addEventListener('keypress', x => {
-			if (x.metaKey == true && x.key == '/'){
+			if (x.key == 'k' && x.target.outerHTML.includes('<body')){
 				store.active = !store.active
 			}
 		})
@@ -45,7 +45,7 @@ export default {
       		prompt('', x)
       	}
       }
-      
+
       let position = x.target
       function getTarget(){
         target = position.getAttribute('data-v-location')

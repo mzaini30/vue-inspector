@@ -26,9 +26,7 @@ createApp(App)
 
 ## How to run Inspector?
 
-Press `meta` and `/` (Mac) 
-
-or `Windows` and `/` (Windows or Linux)
+Press `k` in body.
 
 If page title contains `[dev]` at first place, Inspector is active.
 
